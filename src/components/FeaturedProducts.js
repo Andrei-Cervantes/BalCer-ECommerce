@@ -21,23 +21,27 @@ export default function FeaturedProducts() {
                     "Content-Type": "application/json"
                 }
             });
+    
+            if (response.status === 304) {
+                // Resource not modified, no need to update
+                return;
+            }
+    
             if (!response.ok) {
                 throw new Error("Failed to fetch products");
             }
+    
             const data = await response.json();
-
-            
+    
             const shuffledProducts = data.sort(() => Math.random() - 0.5);
-
-           
             const newFeaturedProducts = shuffledProducts.slice(0, 5);
-
-            
+    
             setFeaturedProducts(newFeaturedProducts);
         } catch (error) {
             console.error("Error fetching products:", error);
         }
     };
+    
 
     return (
         <Row className='bg-dark text-light'>
