@@ -31,6 +31,9 @@ export default function Products() {
 				setProducts([]);
 			}
 		})
+        .catch(error => {
+            console.log("Error in fetching data:", error);
+        })
     }
 
     useEffect(() => {
