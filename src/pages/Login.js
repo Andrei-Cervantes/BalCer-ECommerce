@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import UserContext from '../UserContext';
 
@@ -118,7 +118,7 @@ export default function Login() {
                                     </Button>
                                 </div>
                             </Form>
-                            <p className="mt-3 text-center" style={{ fontSize: '14px' }}>Don't have an account? <a href="/register">Register here</a></p>
+                            <p className="mt-3 text-center" style={{ fontSize: '14px' }}>Don't have an account? <Link to="/register">Register here</Link></p>
                         </div>
                     </Col>
                 </Row>
