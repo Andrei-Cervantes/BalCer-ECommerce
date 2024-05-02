@@ -15,7 +15,12 @@ export default function FeaturedProducts() {
 
     const fetchFeaturedProducts = async () => {
         try {
-            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/products`);
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/products`, {
+                method: 'GET',
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
             if (!response.ok) {
                 throw new Error("Failed to fetch products");
             }
