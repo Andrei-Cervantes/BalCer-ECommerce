@@ -26,7 +26,7 @@ export default function AdminDashboard({ productsData, fetchData }) {
         })
 
         setProducts(productsArr);
-    }, [productsData])
+    }, [productsData, fetchData])
 
     return (
         <Row>

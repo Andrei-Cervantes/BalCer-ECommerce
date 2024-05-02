@@ -31,7 +31,7 @@ export default function AppNavbar() {
 				})
 			}
 		})
-	}, [])
+	}, [setUser])
 
     return (
 		<Navbar bg="light" expand="lg">

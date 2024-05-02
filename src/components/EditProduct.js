@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 export default function EditProduct({ product, fetchData }) {
 
-    const [ productId, setProductId ] = useState("");
+    // const [ productId, setProductId ] = useState("");
     const [ name, setName ] = useState("");
     const [ description, setDescription ] = useState("");
     const [ price, setPrice ] = useState(0);
@@ -17,7 +17,7 @@ export default function EditProduct({ product, fetchData }) {
 		.then(res => res.json())
 		.then(data => {
 			console.log(data)
-			setProductId(data._id);
+			// setProductId(data._id);
 			setName(data.name);
 			setDescription(data.description);
 			setPrice(data.price);
@@ -59,17 +59,15 @@ export default function EditProduct({ product, fetchData }) {
 					icon: "success",
 					text: "Product successfully updated!"
 				})
-				closeEdit();
-				fetchData();
 			} else {
 				Swal.fire({
 					title: "Error!",
 					icon: "error",
 					text: "Please try again"
 				})
-				closeEdit();
-				fetchData();
 			}
+			closeEdit();
+			fetchData();
 		})
     }
 

@@ -31,7 +31,7 @@ export default function Orders() {
     useEffect(() => {
         fetchData();
         // console.log(user)
-    }, [user]);
+    }, [user, fetchData]);
 
     return (
         (!localStorage.getItem('token')) 
