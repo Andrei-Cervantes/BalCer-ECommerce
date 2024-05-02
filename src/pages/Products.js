@@ -39,7 +39,7 @@ export default function Products() {
     useEffect(() => {
         fetchData();
         // console.log(user)
-    }, [user, fetchData])
+    }, [user])
 
     return (
         user.isAdmin === true
