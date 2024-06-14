@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react"
 import { Container, Nav, Navbar } from "react-bootstrap"
 import { Link, NavLink } from "react-router-dom"
 import UserContext from "../UserContext"
+import logoImage from "../assets/navbar-logo.png";
 
 
 export default function AppNavbar() {
@@ -31,12 +32,19 @@ export default function AppNavbar() {
 				})
 			}
 		})
-	}, [setUser])
+	}, [])
 
     return (
-		<Navbar bg="light" expand="lg">
+		<Navbar bg="warning" expand="lg" className="p-0">
 		  <Container fluid>
-		  <Navbar.Brand as={Link} to="/">BalCer</Navbar.Brand>
+		  <Navbar.Brand as={Link} to="/">
+		  	<img
+				src={logoImage}
+				alt="Logo"
+				height="40"
+				className="d-inline-block align-top"
+            />{' '}
+		  </Navbar.Brand>
 		        <Navbar.Toggle aria-controls="basic-navbar-nav" />
 		        <Navbar.Collapse id="basic-navbar-nav">
 		        	<Nav className="ms-auto">

@@ -49,8 +49,8 @@ export default function Profile() {
             :
             <>
                 <Row>
-                    <Col className="p-5 bg-dark text-white">
-                        <div className="p-5 bg-primary">
+                    <Col className="p-5 text-white with-background-image">
+                        <div className="p-5 bg-secondary">
                             <h1 className="my-5 text-center">PROFILE</h1>
                         </div>
                         <h2 className="mt-3">{`${details.firstName} ${details.lastName}`}</h2>

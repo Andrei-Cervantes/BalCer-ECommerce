@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+}
+
+/* Banner Styling */
+.with-background-image {
+  background-image: url('./assets/login-bg.jpg');
+  background-size: cover;
+  background-position: center;
 }

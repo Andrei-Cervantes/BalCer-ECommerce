@@ -42,7 +42,7 @@ export default function ProductSearch() {
     };
 
     return (
-        <>
+        <div className="p-3">
             <Row>
                 <Col>
                     <h2>Search Products</h2>
@@ -127,7 +127,7 @@ export default function ProductSearch() {
                     )}
                 </Col>
             </Row>
-        </>
+        </div>
         
 
     );  

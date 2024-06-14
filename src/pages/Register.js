@@ -92,10 +92,10 @@ export default function Register() {
     }
 
     return (
-        <div className="bg-dark" style={{ minHeight: '100vh', paddingTop: '56px', paddingBottom: '56px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div className="register-bg-container">
             {user.id ? <Navigate to="/" /> : null}
             <Container>
-                <div style={{ backgroundColor: 'white', padding: '20px', borderRadius: '5px' }}>
+                <div className="register-inside-container">
                     <Form onSubmit={(e) => registerUser(e)}>
                         <h1 className="my-5 text-center">Register</h1>
 

@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import UserContext from "../UserContext";
 import AdminDashboard from "../components/AdminDashboard";
 import UserProductsView from "../components/UserProductsView";
-import { Row } from "react-bootstrap";
 
 export default function Products() {
 
@@ -31,9 +30,6 @@ export default function Products() {
 				setProducts([]);
 			}
 		})
-        .catch(error => {
-            console.log("Error in fetching data:", error);
-        })
     }
 
     useEffect(() => {
@@ -46,10 +42,10 @@ export default function Products() {
         ?
             <AdminDashboard productsData={products} fetchData={fetchData} />
         :
-            <Row>
-                <h1 className="text-center py-5 bg-dark text-light">OUR PRODUCTS</h1>
+            <div>
+                <h1 className="text-center py-5 text-light with-background-image">OUR PRODUCTS</h1>
                 <UserProductsView productsData={products} />
-            </Row>
+            </div>
             
     )
 }

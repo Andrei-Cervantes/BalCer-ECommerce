@@ -16,6 +16,7 @@ import Orders from './pages/Orders';
 import Products from './pages/Products';
 import ProductView from './pages/ProductView';
 import Cart from './pages/Cart';
+import AppFooter from './components/AppFooter';
 
 function App() {
 
@@ -72,6 +73,7 @@ function App() {
 
             <Route path="*" element={<Error />} />
           </Routes>
+          <AppFooter />
         </Container>
       </Router>
     </UserProvider>

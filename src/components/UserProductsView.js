@@ -28,7 +28,7 @@ export default function UserProductsView({ productsData }) {
     return (
         <>
             <ProductSearch />
-            <Row className="p-3 bg-dark text-light">
+            <Row className="p-3 bg-dark text-light" style={{ width: '100%', margin: '0' }}>
                 <h2 className="pt-4">All Products</h2>
                 {products}
             </Row>

@@ -1,0 +1,63 @@
+/* Login Styling */
+.login-bg-container {
+    min-height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/login-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-inside-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.login-title {
+    font-size: 2rem; 
+    margin-bottom: 20px;
+}
+
+/* Register Styling */
+.register-bg-container {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/login-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.register-inside-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-left: 7rem;
+    padding-right: 7rem;
+    padding-bottom: 3rem;
+    margin: 5rem 10rem;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+/* Cart Stying */
+.cart-table-container {
+    padding: 2rem;
+}
+
+/* Order Styling */
+.order-table-container {
+    padding: 2rem;
+    max-height: 65vh;
+}
+
+.noOrder-table-container {
+    padding: 2rem;
+    height: 65vh;
+}
+

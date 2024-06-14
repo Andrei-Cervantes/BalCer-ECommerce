@@ -39,7 +39,7 @@ export default function ResetPassword() {
         }
     }
     return (
-        <div className="container">
+        <div className="container px-5 mx-5">
             <h2>Reset Password</h2>
             <form onSubmit={handleResetPassword}>
                 <div className="mb-3">

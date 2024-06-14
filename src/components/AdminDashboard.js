@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { Row, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import EditProduct from "./EditProduct";
 import ArchiveProduct from "./ArchiveProduct";
 import CreateProduct from "./CreateProduct";
+import "./Components.css";
 
 export default function AdminDashboard({ productsData, fetchData }) {
 
@@ -26,31 +27,34 @@ export default function AdminDashboard({ productsData, fetchData }) {
         })
 
         setProducts(productsArr);
-    }, [productsData, fetchData])
+    }, [productsData])
 
     return (
-        <Row>
-            <h1 className="text-center py-5 bg-dark text-light"> Admin Dashboard</h1>
+        <div>
+            <h1 className="text-center py-5 bg-dark text-light with-background-image"> Admin Dashboard</h1>
             <div className="text-center my-3">
                 <CreateProduct fetchData={fetchData} />
                 <Link className="btn btn-success m-1" to="/orders">Show User Orders</Link>
             </div>
 
-            <Table striped bordered hover responsive>
-                <thead>
-                    <tr className="text-center">
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Availability</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
+            <div className="admin-dashboard-table-container">
+                <Table striped bordered hover responsive>
+                    <thead>
+                        <tr className="text-center">
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Availability</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    {products}
-                </tbody>
-            </Table> 
-        </Row>
+                    <tbody>
+                        {products}
+                    </tbody>
+                </Table> 
+            </div>
+            
+        </div>
     )
 }

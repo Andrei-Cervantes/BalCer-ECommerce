@@ -3,6 +3,7 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { Link, Navigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import UserContext from '../UserContext';
+import "./Pages.css";
 
 export default function Login() {
     const { user, setUser } = useContext(UserContext);
@@ -75,12 +76,12 @@ export default function Login() {
         ? 
             <Navigate to="/"/> 
         :
-        <div className="bg-dark" style={{ minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div className="login-bg-container">
             <Container>
                 <Row className="justify-content-md-center">
                     <Col xs={12} md={6}>
-                        <div style={{backgroundColor: 'white', padding: '20px', borderRadius: '5px'}}>
-                            <h1 className="text-center" style={{ fontSize: '24px', marginBottom: '20px' }}>Login to start your shopping experience!</h1> 
+                        <div className='login-inside-container'>
+                            <h1 className="text-center login-title">LOGIN TO START YOUR SHOPPING EXPERIENCE!</h1> 
                             <Form onSubmit={(e) => authenticate(e)}>
                                 <Form.Group controlId="userEmail" className="mb-3"> 
                                     <Form.Label>Email address:</Form.Label>

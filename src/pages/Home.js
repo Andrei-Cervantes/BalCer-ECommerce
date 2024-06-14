@@ -12,10 +12,10 @@ export default function Home() {
     }
 
     return(
-        <>
+        <div>
             <Homepage data={data}/>
             <Features />
             <FeaturedProducts />
-        </>
+        </div>
     )
 }
